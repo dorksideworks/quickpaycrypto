@@ -34,6 +34,7 @@
 
 .wrapper {
   max-width: 1400px;
+  width: 80%;
   margin: auto;
   height: auto;
 }
@@ -124,4 +125,18 @@
 .social {
   width: 50px;
   height: 50px;
+}
+
+.account-btn {
+  display: inline-block;
+  background: #5028CB;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+.break {
+  height: 800px;
+  position: relative;
 }

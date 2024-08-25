@@ -69,10 +69,32 @@ export default function Navigator() {
                 </div>   : ""
             }
 
-            <div class="wrapper py-5 grow flex flex-row relative align-center items-center justify-around">
+            <div class="
+                    wrapper grow flex flex-row relative align-stretch items-stretch justify-around
+                    lg:justify-between lg:px-10
+                    xl:justify-between 
+                    grow
+                     
+                ">
                 <img src="quickpay-logo.png" class="h-6 shrink-0" />
+                <div>
+                    <ul class="flex flex-row gap-10 ">
+                        <li>CARD</li>
+                        <li>FAQ</li>
+                        <li>BECOME AN AFFILIATE</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class=" flex align-center items-center justify-center gap-2">
+                    <span class="bg-red-500 account-btn">
 
-                <div class="h-20 relative flex items-center" onClick={showNav} >
+                        <svg class="p-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>   
+
+                    </span> Open an Account
+                </div>
+                <div class="h-20 relative flex items-center sm:visible xl:hidden lg:visible md:visible " onClick={showNav} >
                     <svg class="qpc-burger" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"/>
                     </svg>

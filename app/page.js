@@ -18,8 +18,8 @@ export default function Home() {
       <Features/>
       <ShareSteps/>
 
-      <div class="break">
-        <img src="cards.png"/>
+      <div class="break z-10">
+        <img src="cards.png" class="z-10" />
       </div>  
 
       <CTA/>

@@ -4,13 +4,14 @@ export default function ShareSteps () {
 
     return (
         <div class="bg-slate-900 rounded-tl-3xl rounded-tr-3xl overflow-hidden mt-20 py-24">
-            <div class="wrapper flex flex-col ">
+            <div class="wrapper flex flex-col xl:flex-row xl:justify-center xl:items-center">
+
                 <div class="px-7">
-                    <h3 class="sharesteps-title text-5xl "> Share to earn money</h3>
-                    <p class="text-white mt-5">You and your friend eachget BONU$ when they join QuickPayCrypto</p>
+                    <h3 class="sharesteps-title text-5xl xl:text-7xl "> Share to earn money</h3>
+                    <p class="text-white mt-5 xl:text-3xl">You and your friend eachget BONU$ when they join QuickPayCrypto</p>
                 </div>
 
-                <div class="mt-10">
+                <div class="mt-10 shrink-1">
 
                     <ul class="text-gray-400 px-10 flex gap-5 flex-col mt-5 items-start">
 
