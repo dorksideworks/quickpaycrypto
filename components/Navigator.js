@@ -20,18 +20,20 @@ export default function Navigator() {
                     </svg>
                 </div>
 
-                <ul class="flex flex-col text-white text-4xl text-center gap-7 mt-20">
+                <ul class="flex flex-col text-white text-4xl text-center gap-7 mt-20
+                    
+                ">
                     <li>
-                        Card
+                        CARD
                     </li>
                     <li>
                         FAQ
                     </li>
                     <li>
-                        Become and Affiliate
+                        BECOME AN AFFILIATE
                     </li>
                     <li>
-                        Contact
+                        CONTACT
                     </li>
                     <li>
                         <svg class="inline qcp-bg-light-blue rounded-full overflow-hidden" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,22 +72,26 @@ export default function Navigator() {
             }
 
             <div class="
-                    wrapper grow flex flex-row relative align-stretch items-stretch justify-around
+                    wrapper grow flex flex-row relative align-center items-center justify-around
                     lg:justify-between lg:px-10
                     xl:justify-between 
                     grow
                      
                 ">
                 <img src="quickpay-logo.png" class="h-6 shrink-0" />
-                <div>
-                    <ul class="flex flex-row gap-10 ">
-                        <li>CARD</li>
-                        <li>FAQ</li>
-                        <li>BECOME AN AFFILIATE</li>
-                        <li>Contact</li>
+                <div class="flex justify-center items-center align-center
+                   hidden sm:hidden xl:block lg:block md:hidden
+                ">
+                    <ul class="flex flex-row gap-10 font-bold">
+                        <li class="hover:text-violet-600 duration-500 cursor-pointer">CARD</li>
+                        <li class="hover:text-violet-600 duration-500 cursor-pointer">FAQ</li>
+                        <li class="hover:text-violet-600 duration-500 cursor-pointer">BECOME AN AFFILIATE</li>
+                        <li class="hover:text-violet-600 duration-500 cursor-pointer"   >CONTACT</li>
                     </ul>
                 </div>
-                <div class=" flex align-center items-center justify-center gap-2">
+                <div class=" flex align-center items-center justify-center gap-2
+                        hidden xs:hidden sm:hidden md:hidden lg:flex xl:flex 
+                ">
                     <span class="bg-red-500 account-btn">
 
                         <svg class="p-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +100,8 @@ export default function Navigator() {
 
                     </span> Open an Account
                 </div>
-                <div class="h-20 relative flex items-center sm:visible xl:hidden lg:visible md:visible " onClick={showNav} >
+                <div class="h-20 relative flex items-center justify-center align-center
+                    sm:flex xl:hidden lg:hidden md:flex " onClick={showNav} >
                     <svg class="qpc-burger" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z" fill="#000000"/>
                     </svg>

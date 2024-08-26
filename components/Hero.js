@@ -24,7 +24,10 @@ export default function Hero() {
              
                 <div class="flex flex-col align-center justify-center relative">
 
-                    <div class="absolute top-48 left-36 scale-90 rotate-12 flex items-center justify-center z-30">
+                    <div class="absolute top-48 left-64 scale-90 rotate-12 flex items-center justify-center z-50 duration-500
+                        xl:top-24 xl:-left-44 xl:scale-125 
+                        md:-left-0 md:top-12
+                    ">
                         <h3 class="absolute text-3xl text-white z-20 text-center font-bold"> NO <br/> FEES</h3>
                         <img class="z-10" src="hero-shape-02.png"/>
                     </div>
@@ -32,7 +35,11 @@ export default function Hero() {
                     <img class="z-10 absolute scale-150 md:scale-150 xl:scale-150 " src="hero-cards.png" />
                     <img class="z-0 " src="eclipse-bg-hero.png"/>
 
-                    <div class="absolute bottom-72 -rotate-12 flex items-center justify-center z-30">
+                    <div class="absolute bottom-72 -rotate-12 flex items-center justify-center z-30
+                        xl:bottom-28 xl:scale-125 duration-500 xl:-right-44
+                        md:bottom-24 md:-right-5
+
+                    ">
                         <h3 class="absolute text-3xl text-white z-20 text-center font-bold"> NO <br/> LIMIT </h3>
                         <img class="z-10" src="hero-shape-01.png"/>
                     </div>
