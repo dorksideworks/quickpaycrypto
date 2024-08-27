@@ -1,16 +1,24 @@
 'use client'
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 
 export default function Navigator() {
     const [nav,setNav] = useState(false);
-
+    const [mode, setMode] = useState("light");
     function showNav() {
         setNav(nav? false : true)
     }
 
+    function handleTheme() {
+        setMode(mode=="light"?"dark" :"light");
+    }
+
+    useEffect(()=>{
+        document.querySelector("html").setAttribute("class", mode);
+    }, [mode])
+
     return(
-        <div class="nav flex z-50">
+        <div class="nav flex z-50 bg-white dark:bg-slate-900 duration-500">
 
             {
                 nav ? <div class="full-nav bg-slate-900 w-full h-full fixed w-screen z-50 flex flex-col duration-500">
@@ -83,23 +91,33 @@ export default function Navigator() {
                    hidden sm:hidden xl:block lg:block md:hidden
                 ">
                     <ul class="flex flex-row gap-10 font-bold">
-                        <li class="hover:text-violet-600 duration-500 cursor-pointer">CARD</li>
-                        <li class="hover:text-violet-600 duration-500 cursor-pointer">FAQ</li>
-                        <li class="hover:text-violet-600 duration-500 cursor-pointer">BECOME AN AFFILIATE</li>
-                        <li class="hover:text-violet-600 duration-500 cursor-pointer"   >CONTACT</li>
+                        <li class="dark:text-white hover:text-violet-600 duration-500 cursor-pointer">CARD</li>
+                        <li class="dark:text-white hover:text-violet-600 duration-500 cursor-pointer">FAQ</li>
+                        <li class="dark:text-white hover:text-violet-600 duration-500 cursor-pointer">BECOME AN AFFILIATE</li>
+                        <li class="dark:text-white hover:text-violet-600 duration-500 cursor-pointer"   >CONTACT</li>
                     </ul>
                 </div>
-                <div class=" flex align-center items-center justify-center gap-2
+                <div class=" flex align-center items-center justify-center gap-8
                         hidden xs:hidden sm:hidden md:hidden lg:flex xl:flex 
                 ">
-                    <span class="bg-red-500 account-btn">
+                   <div class=" flex align-center items-center justify-center gap-2 dark:text-white
+                        hidden xs:hidden sm:hidden md:hidden lg:flex xl:flex">
+                        <span class="bg-red-500 account-btn">
 
-                        <svg class="p-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>   
+                            <svg class="p-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>   
 
-                    </span> Open an Account
+                        </span> Open an Account
+                   </div>
+                   <div class="theme duration-500" onClick={handleTheme}>
+                        {
+                            mode == "light" ? <img src="sun.png"/> : <img src="moon.png" />
+                        }
+                   </div>
                 </div>
+
+                
                 <div class="h-20 relative flex items-center justify-center align-center
                     sm:flex xl:hidden lg:hidden md:flex " onClick={showNav} >
                     <svg class="qpc-burger" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

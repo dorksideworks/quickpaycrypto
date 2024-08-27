@@ -135,3 +135,9 @@
   height: 30px;
   border-radius: 100%;
 }
+
+.theme img{
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
