@@ -141,3 +141,31 @@
   height: 25px;
   cursor: pointer;
 }
+
+.hero-card-1, .hero-card-2 {
+  width: 80%;
+}
+.hero-card-1,.hero-card-2{
+  transform: perspective(5000);
+  -webkit-transform: perspective(5000);
+  -o-transform: perspective(5000) ;
+  -moz-transform: perspective(5000) ;
+  transform: translateZ(-500);
+  
+}
+
+.hero-card-2{
+  transform: perspective(5000);
+  -webkit-transform: perspective(5000);
+  -o-transform: perspective(5000) ;
+  -moz-transform: perspective(5000) ;
+  transform: translateZ(100px);
+  
+}
+
+.hero-images {
+
+  transform-style: preserve-3d;
+  
+}
+

@@ -14,14 +14,14 @@ export default function Features() {
                         <div class="fb-01 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-white overflow-hidden relative">
 
                                 one-time fee, <br/> <b>no subscriptions</b> <br/>
-                                <p class="text-gray-400 text-sm">(use it forever and it’s basically free!)</p>
+                                <p class="text-gray-400 dark:text-white text-sm">(use it forever and it’s basically free!)</p>
                                 <img 
                                     class="absolute -top-20 z-0 w-56 -right-10 object-cover"
                                     src="Features/feature-star-icon.png"/>
                         </div>
 
                         <div class="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4">
-                            <div class="fb-03 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-slate-900 overflow-hidden relative">
+                            <div class="fb-03 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-slate-900 dark:text-white overflow-hidden relative">
 
                                 <b>Unlimited</b><br/>  Spending limit
                             </div>

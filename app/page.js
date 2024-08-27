@@ -10,7 +10,7 @@ import Navigator from "@/components/Navigator";
 export default function Home() {
 
   return (
-    <main className="" class="overflow-hidden w-100">
+    <main className="" class="overflow-hidden w-100 dark:bg-slate-900 duration-500">
       <Navigator/>
       <Hero/>
       <Core/>

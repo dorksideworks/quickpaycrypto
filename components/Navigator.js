@@ -1,10 +1,13 @@
 'use client'
 import React, {useState, useEffect} from "react";
-
+import Image from 'next/image';
+import Logo from '../public/ASSETS/quickpaycrypto-logo.svg';
+import LogoLight from '../public/ASSETS/quickpaycrypto-logo-light.svg';
 
 export default function Navigator() {
     const [nav,setNav] = useState(false);
     const [mode, setMode] = useState("light");
+
     function showNav() {
         setNav(nav? false : true)
     }
@@ -14,11 +17,13 @@ export default function Navigator() {
     }
 
     useEffect(()=>{
+        localStorage.setItem("theme", mode);
         document.querySelector("html").setAttribute("class", mode);
+        
     }, [mode])
 
     return(
-        <div class="nav flex z-50 bg-white dark:bg-slate-900 duration-500">
+        <div class="nav flex z-50 ">
 
             {
                 nav ? <div class="full-nav bg-slate-900 w-full h-full fixed w-screen z-50 flex flex-col duration-500">
@@ -86,7 +91,18 @@ export default function Navigator() {
                     grow
                      
                 ">
-                <img src="quickpay-logo.png" class="h-6 shrink-0" />
+                {/* <img src="quickpay-logo.png" class="h-6 shrink-0" /> */}
+                <div class="qpc-logo relative">
+                    {
+                    <Image 
+                        priority
+                        src={mode=="light"? Logo : LogoLight}
+                        alt="quickpay crypto logo"
+                        height={25}
+                    />
+                    }
+
+                </div>
                 <div class="flex justify-center items-center align-center
                    hidden sm:hidden xl:block lg:block md:hidden
                 ">

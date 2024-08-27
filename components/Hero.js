@@ -1,10 +1,60 @@
-import React from "react";
+'use client'
+import React, {use, useEffect, useState} from "react";
 
 export default function Hero() {
 
 
+    const [mousePos, setMousePos] = useState({
+        top: 0,
+        left: 0
+    })
+
+    const [windowSize, setWindowSize] = useState({width: 0, height: 0})
+    const [rotation, setRotation]  = useState({
+        xrot: 0,
+        yrot: 0
+    })
+
+    const base = 50;
+    const ybase = 60;
+
+    function handleMouseMove (ev) {
+
+        setMousePos({left: ev.pageX, top: ev.pageY});
+        let xhalf = windowSize.width/2;
+        let yhalf = windowSize.height/2;
+        setRotation({
+            xrot: mousePos.left > windowSize.width/2 ? ((mousePos.left * (base / xhalf))/2) : -((xhalf - mousePos.left) * (base / xhalf)),
+            yrot: mousePos.top > windowSize.height/2 ?  ((mousePos.top * (base / yhalf))/2) : -(((yhalf - mousePos.top) * (ybase / yhalf)))
+        })
+
+        console.log(rotation.yrot);
+        
+
+        
+        // console.log(mousePos);
+
+    }   
+
+    function getWindowsDimensions(window) {
+        // const {innerWidth: width, innerHeight: height} = window;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        return{width,height}
+    }
+
+    useEffect(() => {
+        setWindowSize(getWindowsDimensions(window))
+        function handleResize() {
+            setWindowSize(getWindowsDimensions(window ));
+        }
+        window.addEventListener('resize', handleResize());
+        return () => window.removeEventListener('resize', handleResize);
+        
+    },[mousePos.left, mousePos.top]);
+
     return (
-        <div class="relative">
+        <div class="relative" onMouseMove={(ev) => handleMouseMove(ev)}>
             <div class="hero-image-container flex flex-col content-between align-center justify-center items-center">
 
                 <div class="hero-tag relative top-0 bg-white shadow-lg shadow-slate-300 p-5 z-40 flex flex-row justify-between gap-2 rounded-lg align-center 
@@ -22,7 +72,7 @@ export default function Hero() {
                     </div>
                 </div>
              
-                <div class="flex flex-col align-center justify-center relative">
+                <div class="flex flex-col align-center justify-center relative ">
 
                     <div class="absolute top-48 left-64 scale-90 rotate-12 flex items-center justify-center z-50 duration-500
                         xl:top-24 xl:-left-44 xl:scale-125 
@@ -32,7 +82,14 @@ export default function Hero() {
                         <img class="z-10" src="hero-shape-02.png"/>
                     </div>
 
-                    <img class="z-10 absolute scale-150 md:scale-150 xl:scale-150 " src="hero-cards.png" />
+                    {/* <img class="hero-card-1 z-10 absolute -left-52 scale-90 duration-500" src="/Hero/Hero_1.png" style={{transform: `rotateY(${mousePos.left}deg) rotateX(${mousePos.top}deg)`}} /> */}
+                    {/* <img class="hero-card-2 z-10 absolute -right-52 scale-90" src="/Hero/Hero_2.png" />  */}
+                  
+                    <img class="hero-card-1 z-10 absolute scale-50 duration-500 top-32 drop-shadow-2xl" src="/Hero/card-01.png" style={{transform: `rotateY(${Math.round(rotation.xrot)}deg) rotateX(${Math.round(rotation.yrot)}deg) rotateZ(5deg)  translate(-50px,-50px)`}} />
+                    <img class="hero-card-2 z-10 absolute bottom-32 scale-50 duration-500 drop-shadow-xl" src="/Hero/card-02.png" style={{transform: `rotateY(${Math.round(rotation.xrot)}deg) rotateX(${Math.round(rotation.yrot)}deg) rotateZ(5deg)  translate(100px,50px)`}} />
+
+                   
+                    {/* <img class="z-10 absolute scale-150 md:scale-150 xl:scale-150 " src="hero-cards.png" /> */}
                     <img class="z-0 " src="eclipse-bg-hero.png"/>
 
                     <div class="absolute bottom-72 -rotate-12 flex items-center justify-center z-30
