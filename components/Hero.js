@@ -1,5 +1,8 @@
 'use client'
-import React, {use, useEffect, useState} from "react";
+import React, {useRef, useEffect, useState} from "react";
+import anime from 'animejs/lib/anime.es.js';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 export default function Hero() {
 
@@ -28,7 +31,7 @@ export default function Hero() {
             yrot: mousePos.top > windowSize.height/2 ?  ((mousePos.top * (base / yhalf))/2) : -(((yhalf - mousePos.top) * (ybase / yhalf)))
         })
 
-        console.log(rotation.yrot);
+        // console.log(rotation.yrot);
         
 
         
@@ -44,6 +47,27 @@ export default function Hero() {
     }
 
     useEffect(() => {
+        AOS.init();
+        // AOS.refresh();
+        // anime({
+        //     targets: '#hero-tag-1',
+        //     keyframes:[
+        //         {translateY: 200, opacity: 0},
+        //         {translateY: 0, opacity: 1}
+        //     ],
+        //     easing: 'easeInOutSine',
+        //     duration: 800,
+        //     loop: false,
+        //     delay: 0
+        // })
+
+    }, [])
+
+
+    useEffect(() => {
+
+       
+
         setWindowSize(getWindowsDimensions(window))
         function handleResize() {
             setWindowSize(getWindowsDimensions(window ));
@@ -51,13 +75,18 @@ export default function Hero() {
         window.addEventListener('resize', handleResize());
         return () => window.removeEventListener('resize', handleResize);
         
+
+
+
     },[mousePos.left, mousePos.top]);
 
+
+
     return (
-        <div class="relative" onMouseMove={(ev) => handleMouseMove(ev)}>
+        <div class="relative " onMouseMove={(ev) => handleMouseMove(ev)}>
             <div class="hero-image-container flex flex-col content-between align-center justify-center items-center">
 
-                <div class="hero-tag relative top-0 bg-white shadow-lg shadow-slate-300 p-5 z-40 flex flex-row justify-between gap-2 rounded-lg align-center 
+                <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" class=" hero-tag relative top-0 bg-white shadow-lg shadow-slate-300 p-5 z-40 flex flex-row justify-between gap-2 rounded-lg align-center 
                     md:scale-125 md:top-20 md:-left-28
                 ">
 
@@ -74,11 +103,13 @@ export default function Hero() {
              
                 <div class="flex flex-col align-center justify-center relative ">
 
-                    <div class="absolute top-48 left-64 scale-90 rotate-12 flex items-center justify-center z-50 duration-500
+                    <div 
+                         data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="800"  
+                         class="absolute top-48 left-64 scale-90 rotate-12 flex items-center justify-center z-50 duration-500
                         xl:top-24 xl:-left-44 xl:scale-125 
                         md:-left-0 md:top-12
                     ">
-                        <h3 class="absolute text-3xl text-white z-20 text-center font-bold"> NO <br/> FEES</h3>
+                        <h3 d class="absolute text-3xl text-white z-20 text-center font-bold"> NO <br/> FEES</h3>
                         <img class="z-10" src="hero-shape-02.png"/>
                     </div>
 
@@ -92,7 +123,7 @@ export default function Hero() {
                     {/* <img class="z-10 absolute scale-150 md:scale-150 xl:scale-150 " src="hero-cards.png" /> */}
                     <img class="z-0 " src="eclipse-bg-hero.png"/>
 
-                    <div class="absolute bottom-72 -rotate-12 flex items-center justify-center z-30
+                    <div  data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-duration="800"  class="absolute bottom-72 -rotate-12 flex items-center justify-center z-30
                         xl:bottom-28 xl:scale-125 duration-500 xl:-right-44
                         md:bottom-24 md:-right-5
 
@@ -102,7 +133,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <div class="hero-tag relative bg-white shadow-lg shadow-slate-300 p-5 z-30 flex flex-row justify-between gap-2 rounded-lg items-center
+                <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"   class="hero-tag relative bg-white shadow-lg shadow-slate-300 p-5 z-30 flex flex-row justify-between gap-2 rounded-lg items-center
                     md:scale-125 md:bottom-28 md:-right-28
                 ">
 
@@ -117,7 +148,8 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <h1 class="text-slate-900 text-5xl text-center z-50 mt-5"> give your crypto <b>superpowers.</b></h1>
+                <h1  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom"
+                class="text-slate-900 text-5xl text-center z-50 mt-5"> give your crypto <b>superpowers.</b></h1>
 
             </div>
         </div>

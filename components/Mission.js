@@ -1,21 +1,34 @@
 "use client"
 import React, {useEffect,useState} from "react";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 export default function Mission() {
-
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    },[])
     return(
-        <div class="mt-20">
+        <div class="mt-48">
             <div class="wrapper flex items-center align-center justify-around flex-col lg:flex-row xl:flex-row-reverse">
 
                 <div class="p-5">
-                    <img src="Mission/qpc-01.png"/>
+                    <img 
+                        data-aos="fade-left" data-aos-ancor-placement="bottom-bottom" data-aos-easing="ease-in-out" data-aos-duration="800"
+                        src="Mission/qpc-01.png"/>
                 </div>
                 <div>
 
-                    <h4 class="text-slate-900 dark:text-white font-bold">OUR MISSION</h4>
-                    <h2 class="text-slate-900 dark:text-white text-5xl text-center xl:text-left lg:text-left">
+                    <h4 
+                        data-aos="fade-down" data-aos-ancor-placement="bottom-bottom" data-aos-easing="ease-in-out" data-aos-duration="800"
+                        class="text-slate-900 dark:text-white font-bold">
+                        
+                        OUR MISSION
+                    </h4>
+                    <h2 
+                        data-aos="fade-up" data-aos-ancor-placement="bottom-bottom" data-aos-easing="ease-in-out" data-aos-duration="800"
+                        class="text-slate-900 dark:text-white text-5xl text-center xl:text-left lg:text-left">
                         Instant crypto 
                         <br/>
                         <svg version="1.1" class="inline-block mr-5 fill-slate-900 dark:fill-white"  x="0px" y="0px" width="150px" height="50px"
