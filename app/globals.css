@@ -26,6 +26,9 @@
     rgb(var(--background-start-rgb));
 } */
 
+html,body {
+  scroll-behavior: smooth;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -167,4 +170,75 @@
 
   transform-style: preserve-3d;
   
+}
+
+.break-wrapper {
+  position: relative;
+  min-height: 70vh;
+  /* perspective: 300px;
+  overflow-x: hidden;
+  overflow-y: visible; */
+}
+
+.break-card {
+  scale: 0.7
+}
+
+.break-card-1 {
+  left: 400px;
+}
+
+.break-card-2 {
+  /* top: -250px; */
+  left: -300px;
+}
+
+.break-card-3 {
+  right: -200px;
+  /* top: -500px; */
+}
+
+.break-card-4 {
+  left: 100px;
+  /* bottom: -200px; */
+  top: -200px;
+}
+
+.break-card-5 {
+  right: -200px;
+  /* bottom: -100px; */
+  top: -200px;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.floating-div {
+  animation: float 3s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);
+  -moz-animation: float 3s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);;
+  -webkit-animation: float 3s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);
+  -o-animation: float 3s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);
+
+  animation-timing-function: linear;
+}
+
+.floating-div2 {
+  animation: float 5s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);
+  -moz-animation: float 5s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);;
+  -webkit-animation: float 5s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);
+  -o-animation: float 5s infinite cubic-bezier(0.0, 0.0, 1.0, 1.0);
+
+  animation-timing-function: linear;
 }

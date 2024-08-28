@@ -15,13 +15,13 @@ export default function Features() {
             <div class="wrapper px-5 ">
                 <div class="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4">
 
-                    <div data-aos="fade-right" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom"  class="rounded-2xl overflow-hidden">
+                    <div data-aos="fade-right" data-aos-duration="800" data-aos-anchor-placement="center-center"  class="rounded-2xl overflow-hidden">
                         <img src="Features/feature-01.png" class="object-cover w-100 h-full" />
                     </div>
 
                     <div class="grid grid-cols-1 gap-4">
                         <div 
-                            data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-delay="100"
+                            data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="center-center" data-aos-delay="100"
                             class="fb-01 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-white overflow-hidden relative">
 
                                 one-time fee, <br/> <b>no subscriptions</b> <br/>
@@ -33,13 +33,13 @@ export default function Features() {
 
                         <div class="grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 gap-4">
                             <div 
-                            data-aos="fade-right" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-delay="200"
+                            data-aos="fade-right" data-aos-duration="800" data-aos-anchor-placement="center-center" data-aos-delay="200"
                             class="fb-03 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-slate-900 dark:text-white overflow-hidden relative">
 
                                 <b>Unlimited</b><br/>  Spending limit
                             </div>
                             <div 
-                                data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-delay="300"
+                                data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="center-center" data-aos-delay="300"
                                 class="fb-04 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-white overflow-hidden relative">
 
                             <b>Unlimited</b><br/>  Spending limit
@@ -47,7 +47,7 @@ export default function Features() {
                         </div>
 
                         <div 
-                            data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom" data-aos-delay="400"
+                            data-aos="fade-left" data-aos-duration="800" data-aos-anchor-placement="center-center" data-aos-delay="400"
                             class="fb-02 py-8 bg-red-500 rounded-2xl px-5 text-2xl text-white overflow-hidden relative">
 
                                 Crypto to cash<br/> in a <b>flash</b>

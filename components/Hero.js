@@ -69,9 +69,11 @@ export default function Hero() {
        
 
         setWindowSize(getWindowsDimensions(window))
+        
         function handleResize() {
             setWindowSize(getWindowsDimensions(window ));
         }
+
         window.addEventListener('resize', handleResize());
         return () => window.removeEventListener('resize', handleResize);
         
@@ -85,9 +87,8 @@ export default function Hero() {
     return (
         <div class="relative " onMouseMove={(ev) => handleMouseMove(ev)}>
             <div class="hero-image-container flex flex-col content-between align-center justify-center items-center">
-
                 <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" class=" hero-tag relative top-0 bg-white shadow-lg shadow-slate-300 p-5 z-40 flex flex-row justify-between gap-2 rounded-lg align-center 
-                    md:scale-125 md:top-20 md:-left-28
+                    md:scale-125 md:top-20 md:-left-28 floating-div
                 ">
 
                     <div class="image-container rounded-md bg-slate-900 shrink-0 flex items-center justify-center">
@@ -105,7 +106,7 @@ export default function Hero() {
 
                     <div 
                          data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-duration="800"  
-                         class="absolute top-48 left-64 scale-90 rotate-12 flex items-center justify-center z-50 duration-500
+                         class="absolute top-48 left-64 scale-90 rotate-12 flex items-center justify-center z-20 duration-500
                         xl:top-24 xl:-left-44 xl:scale-125 
                         md:-left-0 md:top-12
                     ">
@@ -134,7 +135,7 @@ export default function Hero() {
                 </div>
 
                 <div data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800"   class="hero-tag relative bg-white shadow-lg shadow-slate-300 p-5 z-30 flex flex-row justify-between gap-2 rounded-lg items-center
-                    md:scale-125 md:bottom-28 md:-right-28
+                    md:scale-125 md:bottom-28 md:-right-28 floating-div2
                 ">
 
                     <div class="image-container rounded-md bg-slate-900 shrink-0 flex items-center justify-center">
@@ -148,7 +149,7 @@ export default function Hero() {
                     </div>
                 </div>
 
-                <h1  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom"
+                <h1  data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="800" data-aos-anchor-placement="center-center"
                 class="text-slate-900 text-5xl text-center z-50 mt-5"> give your crypto <b>superpowers.</b></h1>
 
             </div>

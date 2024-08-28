@@ -6,7 +6,7 @@ import Features from '@/components/Features';
 import ShareSteps from "@/components/ShareSteps";
 import CTA from "@/components/CTA";
 import Navigator from "@/components/Navigator";
-
+import BreakSection from "@/components/BreakSection";
 export default function Home() {
 
   return (
@@ -17,10 +17,10 @@ export default function Home() {
       <Mission/>
       <Features/>
       <ShareSteps/>
-
-      <div class="break z-10">
+      <BreakSection/>
+      {/* <div class="break z-10">
         <img src="cards.png" class="z-10" />
-      </div>  
+      </div>   */}
 
       <CTA/>
 

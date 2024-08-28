@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 export default function Mission() {
     useEffect(() => {
         AOS.init();
-        AOS.refresh();
     },[])
     return(
         <div class="mt-48">
@@ -15,19 +14,19 @@ export default function Mission() {
 
                 <div class="p-5">
                     <img 
-                        data-aos="fade-left" data-aos-ancor-placement="bottom-bottom" data-aos-easing="ease-in-out" data-aos-duration="800"
+                        data-aos="fade-left" data-aos-ancor-placement="bottom-center" data-aos-easing="ease-in-out" data-aos-duration="800"
                         src="Mission/qpc-01.png"/>
                 </div>
                 <div>
 
                     <h4 
-                        data-aos="fade-down" data-aos-ancor-placement="bottom-bottom" data-aos-easing="ease-in-out" data-aos-duration="800"
+                        data-aos="fade-down" data-aos-ancor-placement="bottom-center" data-aos-easing="ease-in-out" data-aos-duration="800"
                         class="text-slate-900 dark:text-white font-bold">
                         
                         OUR MISSION
                     </h4>
                     <h2 
-                        data-aos="fade-up" data-aos-ancor-placement="bottom-bottom" data-aos-easing="ease-in-out" data-aos-duration="800"
+                        data-aos="fade-up" data-aos-ancor-placement="bottom-center" data-aos-easing="ease-in-out" data-aos-duration="800"
                         class="text-slate-900 dark:text-white text-5xl text-center xl:text-left lg:text-left">
                         Instant crypto 
                         <br/>
