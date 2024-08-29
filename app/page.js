@@ -7,6 +7,7 @@ import ShareSteps from "@/components/ShareSteps";
 import CTA from "@/components/CTA";
 import Navigator from "@/components/Navigator";
 import BreakSection from "@/components/BreakSection";
+import Footer from "@/components/Footer";
 export default function Home() {
 
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </div>   */}
 
       <CTA/>
+      <Footer/>
 
     </main>
   )
