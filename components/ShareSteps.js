@@ -17,7 +17,7 @@ export default function ShareSteps () {
                 <div 
                     class="px-7">
                     <h3 data-aos="fade-down" data-aos-anchor-placement="center-center" data-aos-duration="800"class="sharesteps-title text-5xl xl:text-7xl "> Share to earn money</h3>
-                    <p data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800" class="text-white mt-5 xl:text-3xl">You and your friend eachget BONU$ when they join QuickPayCrypto</p>
+                    <p data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="800" class="text-white mt-5 xl:text-3xl">You and your friend each get BONU$ when they join QuickPayCrypto</p>
                 </div>
 
                 <div class="mt-10 shrink-1">
