@@ -13,42 +13,7 @@ export default function BreakSection () {
     const card4 = useRef(null);
     const card5 = useRef(null);
     const card_container = useRef(null)
-    const [listening, setListening] = useState(false);
-    
-    const animation = anime.timeline({loop:0,autoplay:false, duration: 5000});
 
-    
-    function handleScroll () {
-        animation.seek(-1 * (animateOnScroll(card_container) * animation.duration ));
-    }
-
-    const animateOnScroll = (div, speed = 3000, offset = 0) =>{
-        const scrollp  = document.documentElement.scrollTop;
-        const containerY = div.current.offsetTop;
-        const scrollpercent = scrollp - containerY;
-        // console.log((scrollpercent + offset) /speed)
-        return (scrollpercent + offset) / speed;
-    }
-    
-    useEffect(() => {
-        animation.add({
-            targets: '.break-card',
-            direction: 'normal',
-            top: 2000,
-            easing: 'easeOutCubic',
-            delay: anime.stagger(200)
-        })
-
-        if (typeof window !== "undefined") {
-            window.addEventListener('scroll',handleScroll);
-          }
-          
-        
-        return () => {
-            window.removeEventListener('scroll',handleScroll)
-        }
-
-    });
 
     return(
         <div class="wrapper break-wrapper" ref={card_container} >

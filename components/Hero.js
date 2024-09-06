@@ -41,32 +41,23 @@ export default function Hero() {
 
     function getWindowsDimensions(window) {
         // const {innerWidth: width, innerHeight: height} = window;
-        const width = window.innerWidth;
+        if(window ){
+            const width = window.innerWidth;
         const height = window.innerHeight;
         return{width,height}
+        }
     }
 
     useEffect(() => {
         AOS.init();
-        // AOS.refresh();
-        // anime({
-        //     targets: '#hero-tag-1',
-        //     keyframes:[
-        //         {translateY: 200, opacity: 0},
-        //         {translateY: 0, opacity: 1}
-        //     ],
-        //     easing: 'easeInOutSine',
-        //     duration: 800,
-        //     loop: false,
-        //     delay: 0
-        // })
 
     }, [])
 
 
     useEffect(() => {
 
-       
+       if(window){
+
 
         setWindowSize(getWindowsDimensions(window))
         
@@ -79,6 +70,7 @@ export default function Hero() {
         
 
 
+       }
 
     },[mousePos.left, mousePos.top]);
 
